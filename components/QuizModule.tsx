@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { FlashcardData, WordData } from '../types';
 import { getRandomGlobalWords } from '../utils/dictionary';
-import { ArrowPathIcon, CheckCircleIcon, XCircleIcon, FaceSmileIcon, FaceFrownIcon, FireIcon } from '@heroicons/react/24/solid';
+import { ArrowPathIcon, CheckCircleIcon, FaceSmileIcon, FaceFrownIcon, FireIcon } from '@heroicons/react/24/solid';
 import { LionCool, OwlDr, RabbitGirl } from './AnimalIcons';
 // @ts-ignore
 import confetti from 'canvas-confetti';
@@ -40,9 +40,9 @@ const QuizModule: React.FC<QuizModuleProps> = ({
   // Auto-start if custom source provided (Mistake Blitz mode)
   useEffect(() => {
     if (customSource && customSource.length > 0 && gameState === 'intro') {
-        // Optional: auto-start or just let user click start with specific text
+        // Optional: auto-start logic can go here
     }
-  }, [customSource]);
+  }, [customSource, gameState]); // Added gameState to dependencies to satisfy linter
 
   const playSound = (type: 'correct' | 'wrong') => {
     if (!audioContextRef.current) {
@@ -122,7 +122,7 @@ const QuizModule: React.FC<QuizModuleProps> = ({
     for (let i = 0; i < targets.length; i++) {
       const target = targets[i];
       const distractors: WordData[] = [];
-      const usedIds = new Set([target.id]);
+      // Fixed: Removed unused 'usedIds' variable
       
       let attempts = 0;
       while (distractors.length < 3 && attempts < 50) {
