@@ -1,0 +1,67 @@
+/* Global Styles */
+body {
+  background-color: #F0F9FF; /* Sky-50 */
+  /* Stylized Zoo Map Pattern */
+  background-image: 
+    radial-gradient(circle at 10% 20%, #E0F2FE 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, #DCFCE7 0%, transparent 25%),
+    radial-gradient(circle at 50% 50%, #F0F9FF 0%, #E0F2FE 100%);
+  background-attachment: fixed;
+  
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+/* 3D Card Flip Effects */
+.card-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.card-back-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Hide scrollbar for clean UI in standalone mode */
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+/* Quiz Animations */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px) rotate(-5deg); }
+  75% { transform: translateX(10px) rotate(5deg); }
+}
+
+.animate-shake {
+  animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes pop-in {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-pop-in {
+  animation: pop-in 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* New: Float Animation for the Hero Animals */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 3s ease-in-out 1.5s infinite;
+}

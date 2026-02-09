@@ -1,0 +1,36 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle (Sky Blue) -->
+  <circle cx="256" cy="256" r="256" fill="#E0F2FE"/>
+  <circle cx="256" cy="256" r="230" fill="#F0F9FF"/>
+  
+  <!-- LION DIRECTOR CHARACTER -->
+  <!-- Head Base -->
+  <circle cx="256" cy="256" r="180" fill="#FEF3C7" />
+  <!-- Mane -->
+  <circle cx="256" cy="236" r="128" fill="#D97706" />
+  
+  <!-- Suit Body -->
+  <path d="M156 416C156 416 176 336 256 356C336 336 356 416 356 416H156Z" fill="#1E3A8A" />
+  <!-- Shirt -->
+  <path d="M224 356L256 396L288 356H224Z" fill="#FFFFFF" />
+  <!-- Tie -->
+  <path d="M256 396L236 368H276L256 396V416" stroke="#DC2626" stroke-width="16" />
+  
+  <!-- Face -->
+  <circle cx="256" cy="236" r="80" fill="#FCD34D" />
+  
+  <!-- Glasses -->
+  <circle cx="228" cy="228" r="20" stroke="#1F2937" stroke-width="8" fill="none" />
+  <circle cx="284" cy="228" r="20" stroke="#1F2937" stroke-width="8" fill="none" />
+  <line x1="248" y1="228" x2="264" y2="228" stroke="#1F2937" stroke-width="8" />
+  
+  <!-- Nose -->
+  <path d="M244 264L256 276L268 264H244Z" fill="#000" />
+  
+  <!-- Mouth -->
+  <path d="M256 276V288" stroke="#000" stroke-width="4" />
+  <path d="M236 288Q256 300 276 288" stroke="#000" stroke-width="4" fill="none" />
+
+  <!-- Sparkles -->
+  <path d="M380 120L390 140L410 150L390 160L380 180L370 160L350 150L370 140L380 120Z" fill="#FBBF24"/>
+</svg>
